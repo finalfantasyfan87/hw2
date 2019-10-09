@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 namespace HW2
 {
     public class Players
@@ -41,25 +44,40 @@ namespace HW2
           return head;
 
       }
+      
 
-      public void findMaxWeight(SeLinkList head)
+      public double findMaxWeight(SeLinkList head)
       {
           SeLinkList heaviest, current;
           current = heaviest =head;
           while (current != null)
           {
-              current.getWeight() > ci
+              if (current.getWeight() > heaviest.getWeight())
+              {
+                  heaviest = current;
+                  current = current.next;
+              }
+
+             
           }
 
-
+          return heaviest.getWeight();
       }
 
-      private void initializeList()
+      public  List<PlayerData> initializeList()
       {
+          List<PlayerData> players = new List<PlayerData>();
           foreach (PlayerData player in myData)
           {
               addPlayer(player.a, player.b, player.c);
+              players.Add();
           }
+          return new PlayerData();
+      }
+
+      public void PrintList()
+      {
+          Console.WriteLine(initializeList());
       }
         public PlayerData[] myData = new PlayerData[]
         {
