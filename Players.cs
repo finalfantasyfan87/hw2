@@ -24,20 +24,34 @@ namespace HW2
           numPlayers = 0;
           head = null;
       }
-      void addPlayer(int a, int b, int c)
+      //similar to the push method of a double linked list
+      SeLinkList addPlayer(int a, int b, int c)
       {
           SeLinkList newPlayer = new SeLinkList(a, b, c);
-          SeLinkList temp = head;
-          while (temp.next !=null)
+
+          newPlayer.prev = null;
+          newPlayer.next = head;
+
+          if (head != null)
           {
-              temp = temp.next;
+              head.prev = newPlayer;
+              head = newPlayer;
+
           }
+          return head;
 
       }
 
-      public void findMaxWeight()
+      public void findMaxWeight(SeLinkList head)
       {
-          int heavyWeight = 
+          SeLinkList heaviest, current;
+          current = heaviest =head;
+          while (current != null)
+          {
+              current.getWeight() > ci
+          }
+
+
       }
 
       private void initializeList()
