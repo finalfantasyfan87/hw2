@@ -8,6 +8,7 @@ namespace HW2
         {
             // create new instance of Players object
             Players players = new Players();
+            players.InitializeList();
             players.PrintList();
         
 

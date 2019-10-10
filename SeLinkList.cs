@@ -1,4 +1,5 @@
 using System;
+using System.Reflection.Metadata.Ecma335;
 
 namespace HW2
 {
@@ -38,5 +39,16 @@ namespace HW2
         {
             return a + b + c;
         }
+
+        public int Index
+        {
+            get { return index; }
+        }
+
+        public void print()
+        {
+            Console.WriteLine("player {0}"+index);
+        }
     }
+  
 }
