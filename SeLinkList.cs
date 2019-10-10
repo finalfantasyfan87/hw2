@@ -5,7 +5,7 @@ namespace HW2
 {
     public class SeLinkList
     {
-        private static int indexCounter = 0;
+         static int indexCounter = 0;
         public SeLinkList prev;
         public SeLinkList next;
         private int a;
@@ -35,19 +35,20 @@ namespace HW2
             indexCounter++;
         }
 
-        public int getWeight()
+        public int GetWeight()
         {
             return a + b + c;
         }
 
-        public int Index
-        {
-            get { return index; }
-        }
+        public int GetIndex() {return index; }
+        
 
         public void print()
         {
             Console.WriteLine("player {0}"+index);
+            Console.WriteLine("a {0}"+a);
+            Console.WriteLine("b {0}"+b);
+            Console.WriteLine("c {0}"+c);
         }
     }
   

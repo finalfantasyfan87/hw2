@@ -10,7 +10,8 @@ namespace HW2
             Players players = new Players();
             players.InitializeList();
             players.PrintList();
-        
+            players.findMaxWeight();
+            players.findMinWeight();
 
         }
     }

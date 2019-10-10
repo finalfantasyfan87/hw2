@@ -107,40 +107,42 @@ namespace HW2
         }
 
 
-        public double findMaxWeight(SeLinkList head)
+        public int findMaxWeight()
         {
-            SeLinkList heaviest, current;
-            current = heaviest = head;
+            int largerWeight =Int32.MinValue;
+            SeLinkList heaviest = null;
+            SeLinkList current = head;
             while (current != null)
             {
-                if (current.getWeight() > heaviest.getWeight())
+                if (current.GetWeight() > largerWeight)
                 {
+                    largerWeight = current.GetWeight();
                     heaviest = current;
-                    current = current.next;
                 }
 
 
             }
-
-            return heaviest.getWeight();
+            Console.WriteLine("MAX:: "+ heaviest.GetWeight());
+            return heaviest.GetWeight();
         }
 
-        public double findMinWeight(SeLinkList head)
+        public int findMinWeight()
         {
-            SeLinkList lightest, current;
-            current = lightest = head;
+            int smallestWeight =Int32.MaxValue;
+            SeLinkList lightest = null;
+            SeLinkList current = head;
             while (current != null)
             {
-                if (current.getWeight() < lightest.getWeight())
+                if (current.GetWeight() < smallestWeight)
                 {
+                    smallestWeight = current.GetWeight();
                     lightest = current;
-                    current = current.next;
                 }
 
 
             }
-
-            return lightest.getWeight();
+Console.WriteLine("MIN: "+ lightest.GetWeight());
+            return lightest.GetWeight();
         }
 
         public void InitializeList()
